@@ -1,7 +1,5 @@
     package com.telusko.Job;
 
-    import org.springframework.stereotype.Service;
-
     import java.util.List;
 
 
@@ -9,4 +7,9 @@
     List<Job> findAll();
     void createJob(Job job);
 
+        Job getJobById(Integer id);
+
+        Boolean deleteJobById(Integer id);
+
+        Job updatedJobById(Integer id, Job updatedJob);
     }
