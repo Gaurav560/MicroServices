@@ -1,0 +1,28 @@
+{
+  "classname" : "com.telusko.company.CompanyService",
+  "storedCandidateMap" : { },
+  "declaredMockMap" : {
+    "com.telusko.company.CompanyService#createCompany#(Lcom/telusko/company/Company;)V" : [ {
+      "id" : "14a1afd3-92af-4fb1-89d2-adba92c442d8",
+      "name" : "mock response companyService.createCompany",
+      "fieldTypeName" : "com.telusko.company.CompanyService",
+      "sourceClassName" : "com.telusko.company.CompanyController",
+      "fieldName" : "companyService",
+      "methodName" : "createCompany",
+      "whenParameter" : [ {
+        "name" : "company",
+        "type" : "ANY_OF_TYPE",
+        "value" : "com.telusko.company.Company"
+      } ],
+      "thenParameter" : [ {
+        "returnParameter" : {
+          "declaredMocks" : [ ],
+          "value" : "\"0\"",
+          "returnValueType" : "REAL",
+          "className" : "void"
+        },
+        "methodExitType" : "NORMAL"
+      } ]
+    } ]
+  }
+}

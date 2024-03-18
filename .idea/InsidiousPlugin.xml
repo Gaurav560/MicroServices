@@ -6,5 +6,10 @@
         <entry key="hasShownFeatures" value="true" />
       </map>
     </option>
+    <option name="mockActiveStatus">
+      <map>
+        <entry key="14a1afd3-92af-4fb1-89d2-adba92c442d8" value="true" />
+      </map>
+    </option>
   </component>
 </project>
