@@ -1,5 +1,6 @@
 package com.telusko.Job;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.telusko.company.Company;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -20,6 +21,7 @@ public class Job {
     private String maxSalary;
     private String location;
 
+    @JsonIgnore
     @ManyToOne
     private Company company;
 

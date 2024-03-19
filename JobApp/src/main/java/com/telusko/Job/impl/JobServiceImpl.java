@@ -4,6 +4,7 @@ import com.telusko.Job.Job;
 import com.telusko.Job.JobRepo;
 import com.telusko.Job.JobService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,20 +19,24 @@ public class JobServiceImpl implements JobService
     }
 
 
+
     @Override
     public List<Job> findAll() {
         return jobRepo.findAll();
     }
+
 
     @Override
     public void createJob(Job job) {
         jobRepo.save(job);
     }
 
+
     @Override
     public Job getJobById(Integer id) {
         return jobRepo.findById(id).get();
     }
+
 
     @Override
     public Boolean deleteJobById(Integer id) {

@@ -1,31 +1,25 @@
-package com.telusko.company;
+package com.telusko.review;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.telusko.Job.Job;
-import com.telusko.review.Review;
+import com.telusko.company.Company;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Company {
-
+@NoArgsConstructor
+public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name;
+    private String title;
     private String description;
+    private double rating;
 
-
-    @OneToMany(mappedBy = "company")
-    private List<Job> jobs;
-
-    @OneToMany(mappedBy = "company")
-    private List<Review> reviews;
+    @JsonIgnore
+    @ManyToOne
+    private Company company;
 }

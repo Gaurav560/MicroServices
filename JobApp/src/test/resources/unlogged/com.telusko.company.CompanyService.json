@@ -22,7 +22,27 @@
           "className" : "void"
         },
         "methodExitType" : "NORMAL"
-      } ]
+      } ],
+      "methodHashKey" : "com.telusko.company.CompanyService#createCompany#(Lcom/telusko/company/Company;)V"
+    } ],
+    "com.telusko.company.CompanyService#getAllCompanies#()Ljava.util.List<Lcom.telusko.company.Company;>;" : [ {
+      "id" : "a9b21f30-f14e-42f4-9ebc-929f168aca5d",
+      "name" : "mock response for call to companyService.getAllCompanies",
+      "fieldTypeName" : "com.telusko.company.CompanyService",
+      "sourceClassName" : "com.telusko.company.CompanyController",
+      "fieldName" : "companyService",
+      "methodName" : "getAllCompanies",
+      "whenParameter" : [ ],
+      "thenParameter" : [ {
+        "returnParameter" : {
+          "declaredMocks" : [ ],
+          "value" : "[{\"id\": \"0\", \"name\": \"string\", \"description\": \"string\", \"jobs\": [{\"id\": \"0\", \"title\": \"string\", \"description\": \"string\", \"minSalary\": \"string\", \"maxSalary\": \"string\", \"location\": \"string\", \"company\": null}], \"reviews\": [{\"id\": \"0\", \"title\": \"string\", \"description\": \"string\", \"rating\": \"0\", \"company\": null}]}]",
+          "returnValueType" : "REAL",
+          "className" : "java.util.List<com.telusko.company.Company>"
+        },
+        "methodExitType" : "NORMAL"
+      } ],
+      "methodHashKey" : "com.telusko.company.CompanyService#getAllCompanies#()Ljava.util.List<Lcom.telusko.company.Company;>;"
     } ]
   }
 }

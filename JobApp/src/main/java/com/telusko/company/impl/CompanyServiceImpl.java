@@ -5,6 +5,7 @@ import com.telusko.company.CompanyRepo;
 import com.telusko.company.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,10 +20,12 @@ public class CompanyServiceImpl implements CompanyService {
         this.companyRepo = companyRepo;
     }
 
+
     @Override
     public List<Company> getAllCompanies() {
         return companyRepo.findAll();
     }
+
 
     @Override
     public boolean updateCompany(int id, Company updatedCompany) {
@@ -39,10 +42,12 @@ public class CompanyServiceImpl implements CompanyService {
         }
     }
 
+
     @Override
     public void createCompany(Company company) {
         companyRepo.save(company);
     }
+
 
     @Override
     public boolean deleteCompany(Integer id) {
@@ -55,6 +60,7 @@ public class CompanyServiceImpl implements CompanyService {
         }
         return deleted;
     }
+
 
     @Override
     public Company getCompany(Integer id) {
